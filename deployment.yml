@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: kyoezer
+  namespace: kinley
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: kyoezer
   template:
     metadata:
       labels:
-        app: my-app
+        app: kyoezer
     spec:
       containers:
-        - name: my-app
+        - name: kyoezer
           image: quay.io/pandeysp/nginxdemo
           ports:
             - containerPort: 80
